@@ -1,0 +1,17 @@
+---
+const { items } = Astro.props;
+---
+
+<div class="bg-gray-200 py-20">
+    <div class="max-w-8xl mx-auto grid grid-cols-4 gap-6">
+        {
+            items.map((item: any) => (
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src={item.image} alt={item.title} />
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                </div>
+            ))
+        }
+    </div>
+</div>

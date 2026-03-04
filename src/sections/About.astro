@@ -1,0 +1,66 @@
+---
+import AboutImage from "@/assets/about.jpg";
+---
+
+<section class="bg-gray-100 py-20" id="nosotros">
+    <div class="max-w-8xl mx-auto flex flex-col w-full gap-6">
+        <h2 class="text-3xl font-extrabold text-primary">¿Quiénes somos?</h2>
+        <div class="flex flex-row w-full justify-between items-center gap-6">
+            <div class="relative w-full rounded-xl overflow-hidden">
+                <img
+                    src={AboutImage.src}
+                    alt=""
+                    class="w-full h-full max-h-100 object-cover"
+                />
+                <div
+                    class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] rounded-xl py-4 flex justify-around items-center bg-black"
+                >
+                    <div class="flex flex-col items-center">
+                        <p class="text-accent font-bold text-2xl">10+</p>
+                        <p class="text-white text-base">Años</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <p class="text-accent font-bold text-2xl">50+</p>
+                        <p class="text-white text-base">Proyectos</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <p class="text-accent font-bold text-2xl">20+</p>
+                        <p class="text-white text-base">Equipos</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="w-full flex flex-col gap-4 text-gray-700/80 font-medium"
+            >
+                <h1
+                    class="uppercase font-black text-4xl tracking-wide text-black"
+                >
+                    De agregados a ejecución integral
+                </h1>
+                <p>
+                    <strong class="text-black"
+                        >AYM Corporación de Negocios</strong
+                    > nació en la comercialización y transporte de agregados para
+                    el sector construcción en el Perú.
+                </p>
+                <p>
+                    Con visión de crecimiento, evolucionamos hasta consolidar
+                    una flota propia de maquinaria pesada, lo que nos permite
+                    ejecutar directamente proyectos de movimiento de tierras,
+                    infraestructura y construcción.
+                </p>
+                <p>
+                    Nuestro enfoque integral nos convierte en un aliado
+                    estratégico confiable, capacitado para abordar desafíos de
+                    distintos niveles de complejidad con compromiso y eficiencia
+                    operativa en cada etapa de la obra.
+                </p>
+                <p class="pl-2 border-l-4 border-accent">
+                    <strong class="text-black">No somos intermediarios.</strong> Ejecutamos
+                    cada proyecto con nuestros propios equipos y operadores certificados,
+                    garantizando control total, calidad y cumplimiento.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

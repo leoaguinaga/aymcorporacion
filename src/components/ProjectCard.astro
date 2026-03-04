@@ -1,0 +1,60 @@
+---
+import Project from "@/assets/project.jpg";
+import MapPin from "@/assets/icons/map-pin.svg";
+import Briefcase from "@/assets/icons/briefcase.svg";
+import CircleCheck from "@/assets/icons/circle-check.svg";
+---
+
+<article class="flex flex-row rounded-xl overflow-hidden">
+    <img src={Project.src} alt="" class="w-full h-full object-cover" />
+    <div class="flex flex-col gap-8 p-8 w-full bg-white justify-center">
+        <div class="flex flex-col gap-4">
+            <h2 class="font-black text-2xl">
+                Habitación Urbana - Vía principal
+            </h2>
+            <div class="flex flex-row items-start gap-2">
+                <MapPin class="size-6 text-accent" />
+                <div>
+                    <p class="text-gray-700">Ubicación</p>
+                    <strong>Lima, Perú</strong>
+                </div>
+            </div>
+            <div class="flex flex-row items-start gap-2">
+                <Briefcase class="size-6 text-accent" />
+                <div>
+                    <p class="text-gray-700">Servicio</p>
+                    <strong
+                        >Movimiento de tierras y transporte de agregados</strong
+                    >
+                </div>
+            </div>
+            <div class="flex flex-row items-start gap-2">
+                <CircleCheck class="size-6 text-accent" />
+                <div>
+                    <p class="text-gray-700">Resultado</p>
+                    <strong>
+                        12,000 m³ de material movido en 45 días. Entrega
+                        anticipada.
+                    </strong>
+                </div>
+            </div>
+        </div>
+        <div class="flex items-center justify-between gap-4">
+            <img
+                src={Project.src}
+                alt=""
+                class="w-[calc(100%/3-12px)] h-full object-cover rounded-lg"
+            />
+            <img
+                src={Project.src}
+                alt=""
+                class="w-[calc(100%/3-12px)] h-full object-cover rounded-lg"
+            />
+            <img
+                src={Project.src}
+                alt=""
+                class="w-[calc(100%/3-12px)] h-full object-cover rounded-lg"
+            />
+        </div>
+    </div>
+</article>

@@ -1,0 +1,39 @@
+---
+import ChevronLeft from "@/assets/icons/chevron-left.svg";
+import ChevronRight from "@/assets/icons/chevron-right.svg";
+import ProjectCard from "@/components/ProjectCard.astro";
+---
+
+<section class="bg-gray-200 py-20" id="proyectos">
+    <div class="max-w-8xl mx-auto flex flex-col gap-4 w-full">
+        <div class="flex flex-col gap-2">
+            <div class="w-full flex items-center justify-between">
+                <div class="flex flex-col items-start gap-2">
+                    <h2 class="text-3xl font-extrabold text-primary">
+                        Proyectos destacados
+                    </h2>
+                    <h1
+                        class="uppercase font-black text-4xl max-w-lg tracking-wide text-black"
+                    >
+                        Resultados que hablan por sí solos
+                    </h1>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button
+                        class="flex items-center justify-center rounded-full bg-primary text-white p-2"
+                    >
+                        <ChevronLeft class="size-6" />
+                    </button>
+                    <button
+                        class="flex items-center justify-center rounded-full bg-primary text-white p-2"
+                    >
+                        <ChevronRight class="size-6" />
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col mt-4 items-center justify-between gap-4">
+            <ProjectCard />
+        </div>
+    </div>
+</section>

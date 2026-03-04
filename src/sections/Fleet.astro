@@ -1,0 +1,20 @@
+---
+import FleetCard from "@/components/FleetCard.astro";
+---
+
+<section class="max-w-8xl mx-auto flex flex-col gap-8 my-20" id="flota">
+    <div class="flex flex-col items-center gap-2">
+        <h2 class="text-3xl font-extrabold text-primary">Nuestra flota</h2>
+        <h1
+            class="uppercase font-black text-4xl tracking-wide max-w-2xl text-center"
+        >
+            Maquinaria propia en óptimo estado
+        </h1>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-20">
+        <FleetCard />
+        <FleetCard />
+        <FleetCard />
+        <FleetCard />
+    </div>
+</section>

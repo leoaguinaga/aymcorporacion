@@ -1,0 +1,24 @@
+---
+const { subtitle, title, items, image } = Astro.props;
+import CircleCheck from "@/assets/icons/circle-check.svg";
+---
+
+<section class="bg-gray-950 py-20">
+    <div class="flex items-center justify-between">
+        <div>
+            <p>{subtitle}</p>
+            <h2>{title}</h2>
+            <ul>
+                {
+                    items.map((item: any) => (
+                        <li class="flex items-center gap-2">
+                            <CircleCheck class="size-5 text-accent" />
+                            <p>{item}</p>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+        <img src={image} alt={title} class="w-1/2" />
+    </div>
+</section>

@@ -1,0 +1,43 @@
+---
+const { image, title, items } = Astro.props;
+import ServiceMachinery from "@/assets/service-machinery.jpg";
+import CircleCheck from "@/assets/icons/circle-check.svg";
+---
+
+<article
+    class="group relative rounded-lg overflow-hidden border border-accent/20 hover:border-accent/40 transition-colors"
+>
+    <div class="flex flex-col sm:flex-row">
+        <div class="sm:w-2/5 h-48 sm:h-auto overflow-hidden">
+            <img
+                src="/src/assets/service-machinery.jpg"
+                alt="Excavadoras Hidráulicas"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+        </div><div
+            class="sm:w-3/5 p-6 flex flex-col justify-center bg-gray-950 text-white"
+        >
+            <h3
+                class="font-heading text-xl font-bold uppercase text-dark-surface-foreground mb-3"
+            >
+                Excavadoras Hidráulicas
+            </h3><ul class="space-y-2 text-white/90">
+                <li
+                    class="flex items-center gap-2 text-sm text-dark-surface-foreground/70"
+                >
+                    <CircleCheck class="size-4 text-accent" />20 – 35 toneladas
+                </li><li
+                    class="flex items-center gap-2 text-sm text-dark-surface-foreground/70"
+                >
+                    <CircleCheck class="size-4 text-accent" />
+                    Brazo largo y estándar
+                </li><li
+                    class="flex items-center gap-2 text-sm text-dark-surface-foreground/70"
+                >
+                    <CircleCheck class="size-4 text-accent" />
+                    GPS integrado
+                </li>
+            </ul>
+        </div>
+    </div>
+</article>
