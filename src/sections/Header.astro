@@ -1,41 +1,26 @@
 ---
-import LogoSvg from "@/../public/logo.svg";
+import LogoSvg from "@/../public/logos/logo.svg";
 import { MobileNav } from "@/components/MobileNav";
+import { ServicesHover } from "@/components/ServicesHover";
 ---
 
-<header
-    class="fixed top-0 bg-white/90 border-b border-primary/20 backdrop-blur-xl z-999 w-full"
->
+<header class="fixed top-0 bg-background backdrop-blur-xl z-999 w-full">
     <nav
-        class="max-w-8xl mx-auto px-6 py-2 md:py-0.75 flex justify-between items-center font-medium uppercase text-sm"
+        class="max-w-8xl mx-auto py-2 md:py-0.75 flex justify-between items-center font-medium"
     >
         <div class="flex items-center gap-4">
             <LogoSvg class="h-10 md:h-12" />
             <div class="hidden lg:flex items-center gap-4 ml-4">
                 <a
-                    href="#nosotros"
+                    href="/"
                     class="hover:text-primary transition-colors duration-300"
-                    >Nosotros</a
+                    >Inicio</a
                 >
+                <ServicesHover client:load />
                 <a
-                    href="#servicios"
+                    href="/portafolio"
                     class="hover:text-primary transition-colors duration-300"
-                    >Servicios</a
-                >
-                <a
-                    href="#proceso"
-                    class="hover:text-primary transition-colors duration-300"
-                    >Proceso</a
-                >
-                <a
-                    href="#flota"
-                    class="hover:text-primary transition-colors duration-300"
-                    >Flota</a
-                >
-                <a
-                    href="#proyectos"
-                    class="hover:text-primary transition-colors duration-300"
-                    >Proyectos</a
+                    >Portafolio</a
                 >
             </div>
         </div>

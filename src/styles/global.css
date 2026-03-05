@@ -7,9 +7,9 @@
 
 @theme inline {
     --color-primary: #4843ef;
-    --color-secondary: #4843ef;
+    --color-secondary: #010101;
     --color-accent: #FFC500;
-    --color-background: #fff;
+    --color-background: #fafafa;
     --color-foreground: #000;
     --spacing-8xl: 86rem;
     --color-sidebar-ring: var(--sidebar-ring);

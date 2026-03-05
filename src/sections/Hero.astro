@@ -1,68 +1,154 @@
 ---
-import HeroImage from "@/assets/hero.jpg";
-import Wrench from "@/assets/icons/wrench.svg";
-import Cube from "@/assets/icons/cube.svg";
-import Truck from "@/assets/icons/truck.svg";
+import LosPortales from "@/../public/hero/losportales.png";
+import Galilea from "@/../public/hero/logo-galilea.svg";
 ---
 
 <section
-    class="relative flex items-center justify-start overflow-hidden w-full text-white bg-linear-to-r from-black/95 via-black/90 to-black/80"
+    class="flex flex-col lg:flex-row max-w-8xl mx-auto justify-between pt-24 lg:pt-20 pb-10 lg:pb-0 px-6 xl:px-0 gap-10 lg:gap-8"
 >
-    <img
-        src={HeroImage.src}
-        alt=""
-        class="absolute inset-0 w-full h-full object-cover opacity-20"
-    />
-    <div
-        class="relative max-w-8xl mx-auto flex flex-col items-start gap-4 z-1 px-6 lg:px-0 w-full pb-40 pt-50"
-    >
-        <div class="flex flex-wrap items-center gap-2">
-            <h3
-                class="px-3 py-1 text-sm font-semibold rounded-full text-white bg-primary flex items-center gap-1"
-            >
-                <Wrench class="size-4" />
-                Construcción
-            </h3>
-            <h3
-                class="px-3 py-1 text-sm font-semibold rounded-full text-white bg-primary flex items-center gap-1"
-            >
-                <Truck class="size-4" />
-                Flota
-            </h3>
-            <h3
-                class="px-3 py-1 text-sm font-semibold rounded-full text-white bg-primary flex items-center gap-1"
-            >
-                <Cube class="size-4" />
-                Agregados
-            </h3>
-        </div>
-
-        <h1 class="text-5xl lg:text-6xl font-extrabold max-w-2xl">
-            Ejecutamos con <span class="text-accent">Maquinaria Propia</span> y Control
-            Total
-        </h1>
-
-        <h2
-            class="text-lg lg:text-xl max-w-2xl text-white/90 mt-2 font-medium leading-relaxed"
+    <div class="w-full flex flex-col gap-6 lg:gap-4 justify-center lg:py-25">
+        <h1
+            class="text-4xl lg:text-5xl font-extrabold max-w-2xl leading-tight lg:leading-normal"
         >
-            Flota operativa, operadores certificados y respaldo técnico para
-            proyectos de infraestructura, movimiento de tierras y construcción
-            en todo el Perú.
+            Construcción y Venta de Agregados con <span class="text-primary"
+                >Maquinaria Propia</span
+            > en Chiclayo
+        </h1>
+        <h2 class="text-base lg:text-lg text-gray-600 lg:max-w-164 font-medium">
+            Ejecutamos proyectos de construcción, movimiento de tierras y
+            suministro de agregados con maquinaria propia, garantizando
+            eficiencia, control y entrega directa en obra.
         </h2>
-
-        <div class="flex flex-wrap gap-4 mt-3 items-center">
+        <div
+            class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center"
+        >
             <a
-                href="#"
-                class="text-white bg-primary text-base font-bold px-6 py-3 rounded-xl hover:bg-primary/90 duration-200 transition-colors uppercase"
+                href="#contacto"
+                class="bg-primary px-5 py-3 lg:py-2 text-white font-semibold rounded-lg hover:bg-primary/90 text-center text-base lg:text-lg transition-colors duration-300 cursor-pointer"
             >
                 Solicitar cotización
             </a>
             <a
-                href="#"
-                class="text-black bg-accent text-base font-bold px-8 py-3 rounded-xl transition-transform hover:scale-105 uppercase tracking-wide"
+                href="#contacto"
+                class="bg-secondary px-5 py-3 lg:py-2 text-white font-semibold rounded-lg hover:bg-secondary/90 text-center text-base lg:text-lg transition-colors duration-300 cursor-pointer"
             >
-                Ver flota
+                Ver proyectos
             </a>
+        </div>
+        <div class="flex flex-col gap-6 mt-6 lg:mt-8 w-full lg:pr-10">
+            <p
+                class="text-lg lg:text-xl text-gray-700 font-bold text-center lg:text-left"
+            >
+                Somos proveedores de
+            </p>
+            <div
+                class="flex flex-row items-center justify-around lg:justify-start lg:gap-12"
+            >
+                <img
+                    src={LosPortales.src}
+                    alt="Los Portales"
+                    class="h-12 lg:h-18"
+                />
+                <img
+                    src={Galilea.src}
+                    alt="Galilea"
+                    class="h-14 lg:h-20 lg:mt-2"
+                />
+            </div>
+        </div>
+    </div>
+    <div
+        class="flex flex-col gap-4 w-full lg:w-1/2 overflow-hidden items-center justify-center"
+    >
+        <div
+            class="relative w-full overflow-hidden rounded-2xl aspect-9/10 max-h-150"
+        >
+            <div
+                id="hero-track"
+                class="flex flex-row h-full transition-transform duration-500 ease-out w-full"
+            >
+                <img
+                    src="/hero/main.png"
+                    alt=""
+                    class="w-full h-full object-cover shrink-0"
+                />
+                <img
+                    src="/hero/apisonadora.png"
+                    alt=""
+                    class="w-full h-full object-cover shrink-0"
+                />
+                <img
+                    src="/hero/rodillo.png"
+                    alt=""
+                    class="w-full h-full object-cover shrink-0"
+                />
+            </div>
+        </div>
+        <div class="flex items-center justify-center gap-1.5 mt-2">
+            <button
+                data-index="0"
+                class="hero-dot w-8 h-2 rounded-full bg-primary transition-all duration-300 cursor-pointer"
+                aria-label="Slide 1"></button>
+            <button
+                data-index="1"
+                class="hero-dot w-4 h-2 rounded-full bg-secondary transition-all duration-300 cursor-pointer"
+                aria-label="Slide 2"></button>
+            <button
+                data-index="2"
+                class="hero-dot w-4 h-2 rounded-full bg-secondary transition-all duration-300 cursor-pointer"
+                aria-label="Slide 3"></button>
         </div>
     </div>
 </section>
+
+<script>
+    const setupCarousel = () => {
+        const track = document.getElementById("hero-track");
+        const dots = document.querySelectorAll(".hero-dot");
+        if (!track || dots.length === 0) return;
+
+        let currentIndex = 0;
+        const totalSlides = dots.length;
+        let autoPlayInterval: ReturnType<typeof setInterval>;
+
+        const updateCarousel = (index: number) => {
+            currentIndex = index;
+            track.style.transform = `translateX(-${index * 100}%)`;
+
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove("w-4", "bg-secondary");
+                    dot.classList.add("w-8", "bg-primary");
+                } else {
+                    dot.classList.remove("w-8", "bg-primary");
+                    dot.classList.add("w-4", "bg-secondary");
+                }
+            });
+        };
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", () => {
+                updateCarousel(index);
+                resetInterval();
+            });
+        });
+
+        const nextSlide = () => {
+            updateCarousel((currentIndex + 1) % totalSlides);
+        };
+
+        const startInterval = () => {
+            autoPlayInterval = setInterval(nextSlide, 5000);
+        };
+
+        const resetInterval = () => {
+            clearInterval(autoPlayInterval);
+            startInterval();
+        };
+
+        startInterval();
+    };
+
+    setupCarousel();
+    document.addEventListener("astro:after-swap", setupCarousel);
+</script>
