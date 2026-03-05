@@ -1,0 +1,36 @@
+---
+import CTA from "@/sections/CTA.astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/service/Header.astro";
+import Details from "@/components/service/Details.astro";
+
+const details = [
+    "Corte, relleno y nivelación de terrenos",
+    "Excavación masiva y selectiva",
+    "Compactación y perfilado de plataformas",
+    "Acarreo y eliminación de material excedente",
+    "Apertura y mantenimiento de trochas",
+    "Estudios topográficos",
+];
+---
+
+<Layout>
+    <Header image="/services/transport.jpg">
+        <Fragment slot="title">
+            <span class="block text-white">Movimiento de</span>
+            <span class="block text-accent">Tierras</span>
+        </Fragment>
+        <Fragment slot="subtitle">
+            Soluciones integrales de movimiento de tierras para minería y obras
+            civiles. Garantizamos tiempos de ejecución eficientes y máxima
+            seguridad técnica.
+        </Fragment>
+    </Header>
+    <Details
+        title="Nuestras capacidades"
+        subtitle="Movimiento de Tierras"
+        items={details}
+        image="/services/transport.jpg"
+    />
+    <CTA />
+</Layout>

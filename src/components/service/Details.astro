@@ -3,22 +3,38 @@ const { subtitle, title, items, image } = Astro.props;
 import CircleCheck from "@/assets/icons/circle-check.svg";
 ---
 
-<section class="bg-gray-950 py-20">
-    <div class="flex items-center justify-between">
-        <div>
-            <p>{subtitle}</p>
-            <h2>{title}</h2>
-            <ul>
+<section class="py-24">
+    <div
+        class="max-w-8xl mx-auto max-lg:px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center"
+    >
+        <div class="flex flex-col items-start gap-10 max-w-lg">
+            <div class="flex flex-col gap-2">
+                <h2 class="text-2xl md:text-3xl font-extrabold text-primary">
+                    {subtitle}
+                </h2>
+                <h1
+                    class="uppercase font-black text-3xl md:text-4xl tracking-wide text-black"
+                >
+                    {title}
+                </h1>
+            </div>
+            <ul class="flex flex-col gap-6 w-full">
                 {
-                    items.map((item: any) => (
-                        <li class="flex items-center gap-2">
-                            <CircleCheck class="size-5 text-accent" />
-                            <p>{item}</p>
+                    items.map((item: string) => (
+                        <li class="flex items-center gap-4 text-black/80 font-medium">
+                            <div class="shrink-0 text-accent">
+                                <CircleCheck class="w-6 h-6 text-accent" />
+                            </div>
+                            <span class="text-base md:text-lg">{item}</span>
                         </li>
                     ))
                 }
             </ul>
         </div>
-        <img src={image} alt={title} class="w-1/2" />
+        <div
+            class="w-full relative rounded-xl overflow-hidden shadow-2xl h-[400px] lg:h-[500px]"
+        >
+            <img src={image} alt={title} class="w-full h-full object-cover" />
+        </div>
     </div>
 </section>

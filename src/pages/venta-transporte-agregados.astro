@@ -1,0 +1,36 @@
+---
+import CTA from "@/sections/CTA.astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/service/Header.astro";
+import Details from "@/components/service/Details.astro";
+
+const details = [
+    "Arena fina y gruesa",
+    "Piedra chancada (diferentes medidas)",
+    "Hormigón",
+    "Afirmado",
+    "Tierra de chacra",
+    "Nuestras canteras garantizan calidad",
+];
+---
+
+<Layout>
+    <Header image="/services/agregates.jpg">
+        <Fragment slot="title">
+            <span class="block text-white">Venta y Transporte de</span>
+            <span class="block text-accent">Agregados</span>
+        </Fragment>
+        <Fragment slot="subtitle">
+            Materiales de construcción de la más alta calidad extraídos de
+            canteras propias. Logística eficiente con nuestra flota de volquetes
+            para entrega puntual.
+        </Fragment>
+    </Header>
+    <Details
+        title="Materiales disponibles"
+        subtitle="Agregados"
+        items={details}
+        image="/services/agregates.jpg"
+    />
+    <CTA />
+</Layout>

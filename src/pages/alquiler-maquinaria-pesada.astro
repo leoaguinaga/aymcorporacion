@@ -1,0 +1,36 @@
+---
+import CTA from "@/sections/CTA.astro";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/service/Header.astro";
+import Details from "@/components/service/Details.astro";
+
+const details = [
+    "Excavadoras sobre orugas (20-35 Tn)",
+    "Cargadores frontales",
+    "Retroexcavadoras",
+    "Rodillos compactadores",
+    "Volquetes de 15m³ y 20m³",
+    "Motoniveladora",
+];
+---
+
+<Layout>
+    <Header image="/services/rent.jpg">
+        <Fragment slot="title">
+            <span class="block text-white">Alquiler de</span>
+            <span class="block text-accent">Maquinaria pesada</span>
+        </Fragment>
+        <Fragment slot="subtitle">
+            Equipos propios con operador certificado. Disponibilidad inmediata
+            para proyectos de construcción, minería y carreteras en todo el
+            Perú.
+        </Fragment>
+    </Header>
+    <Details
+        title="Equipos disponibles"
+        subtitle="Flota"
+        items={details}
+        image="/services/rent.jpg"
+    />
+    <CTA />
+</Layout>

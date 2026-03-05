@@ -1,35 +1,30 @@
 ---
 const { image, title, items, href } = Astro.props;
-import Agregates from "@/assets/agregates.jpg";
 import ArrowRight from "@/assets/icons/arrow-right.svg";
 ---
 
 <article class="w-full flex flex-col rounded-xl overflow-hidden shadow-lg">
     <img
-        src={Agregates.src}
+        src={`/services/${image}`}
         alt=""
         class="max-h-60 w-full object-cover hover:scale-105 transition-transform duration-300 over"
     />
     <div class="p-6 bg-white z-1 flex flex-col gap-4 text-left">
         <h3 class="text-xl uppercase font-extrabold">
-            Venta y Transporte de Agregados
+            {title}
         </h3>
         <ul class="gap-1 flex flex-col">
-            <li class="items-center gap-2 flex">
-                <div class="size-2 bg-primary rounded-full"></div>
-                Flota operativa
-            </li>
-            <li class="items-center gap-2 flex">
-                <div class="size-2 bg-primary rounded-full"></div>
-                Operadores certificados
-            </li>
-            <li class="items-center gap-2 flex">
-                <div class="size-2 bg-primary rounded-full"></div>
-                Respaldo técnico
-            </li>
+            {
+                items.map((item: string) => (
+                    <li class="items-center gap-2 flex">
+                        <div class="size-2 bg-primary rounded-full" />
+                        {item}
+                    </li>
+                ))
+            }
         </ul>
         <a
-            href="#"
+            href={href}
             class="font-bold text-amber-500 flex items-center text-sm gap-1"
             >Ver más
             <ArrowRight class="size-3.5" />

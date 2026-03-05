@@ -1,26 +1,38 @@
 ---
 import Project from "@/assets/project.jpg";
+import Carretera1 from "@/assets/carretera1.jpg";
+import Carretera2 from "@/assets/carretera2.jpeg";
 import MapPin from "@/assets/icons/map-pin.svg";
 import Briefcase from "@/assets/icons/briefcase.svg";
 import CircleCheck from "@/assets/icons/circle-check.svg";
 ---
 
-<article class="flex flex-row rounded-xl overflow-hidden">
-    <img src={Project.src} alt="" class="w-full h-full object-cover" />
-    <div class="flex flex-col gap-8 p-8 w-full bg-white justify-center">
-        <div class="flex flex-col gap-4">
-            <h2 class="font-black text-2xl">
+<article
+    class="flex flex-col lg:flex-row rounded-xl overflow-hidden shadow-xl w-full"
+>
+    <img
+        src={Project.src}
+        alt=""
+        class="w-full lg:w-1/2 h-[300px] lg:h-auto object-cover"
+    />
+    <div
+        class="flex flex-col gap-6 md:gap-8 p-6 md:p-8 w-full lg:w-1/2 bg-white justify-center"
+    >
+        <div class="flex flex-col gap-4 text-sm md:text-base">
+            <h2 class="font-black text-xl md:text-2xl">
                 Habitación Urbana - Vía principal
             </h2>
-            <div class="flex flex-row items-start gap-2">
-                <MapPin class="size-6 text-accent" />
+            <div class="flex flex-row items-start gap-3">
+                <MapPin class="size-5 md:size-6 text-accent shrink-0 mt-0.5" />
                 <div>
                     <p class="text-gray-700">Ubicación</p>
                     <strong>Lima, Perú</strong>
                 </div>
             </div>
-            <div class="flex flex-row items-start gap-2">
-                <Briefcase class="size-6 text-accent" />
+            <div class="flex flex-row items-start gap-3">
+                <Briefcase
+                    class="size-5 md:size-6 text-accent shrink-0 mt-0.5"
+                />
                 <div>
                     <p class="text-gray-700">Servicio</p>
                     <strong
@@ -28,8 +40,10 @@ import CircleCheck from "@/assets/icons/circle-check.svg";
                     >
                 </div>
             </div>
-            <div class="flex flex-row items-start gap-2">
-                <CircleCheck class="size-6 text-accent" />
+            <div class="flex flex-row items-start gap-3">
+                <CircleCheck
+                    class="size-5 md:size-6 text-accent shrink-0 mt-0.5"
+                />
                 <div>
                     <p class="text-gray-700">Resultado</p>
                     <strong>
@@ -39,21 +53,23 @@ import CircleCheck from "@/assets/icons/circle-check.svg";
                 </div>
             </div>
         </div>
-        <div class="flex items-center justify-between gap-4">
+        <div
+            class="flex items-center justify-between gap-3 md:gap-4 mt-2 lg:mt-0"
+        >
             <img
                 src={Project.src}
                 alt=""
-                class="w-[calc(100%/3-12px)] h-full object-cover rounded-lg"
+                class="w-[calc(100%/3-8px)] md:w-[calc(100%/3-11px)] h-20 sm:h-28 lg:h-full object-cover rounded-lg"
             />
             <img
-                src={Project.src}
+                src={Carretera1.src}
                 alt=""
-                class="w-[calc(100%/3-12px)] h-full object-cover rounded-lg"
+                class="w-[calc(100%/3-8px)] md:w-[calc(100%/3-11px)] h-20 sm:h-28 lg:h-full object-cover rounded-lg"
             />
             <img
-                src={Project.src}
+                src={Carretera2.src}
                 alt=""
-                class="w-[calc(100%/3-12px)] h-full object-cover rounded-lg"
+                class="w-[calc(100%/3-8px)] md:w-[calc(100%/3-11px)] h-20 sm:h-28 lg:h-full object-cover rounded-lg"
             />
         </div>
     </div>

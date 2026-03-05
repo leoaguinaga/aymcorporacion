@@ -4,7 +4,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 export function ContactForm() {
     return (
-        <div className="w-full max-w-4xl mx-auto">
+        <div className="w-full max-w-4xl mx-auto px-6 md:px-0">
             <form className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Input
