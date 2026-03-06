@@ -7,7 +7,7 @@ export const services = [
             "Transporte con flota propia de volquetes",
             "Abastecimiento continuo para obra",
         ],
-        image: "agregates.jpg",
+        image: "/services/agregates.png",
     },
     {
         title: "Alquiler de maquinaria pesada",
@@ -17,7 +17,7 @@ export const services = [
             "Equipos en óptimo estado operativo",
             "Incluye operador certificado frontales",
         ],
-        image: "rent.jpg",
+        image: "/services/rent.png",
     },
     {
         title: "Movimiento de tierras",
@@ -27,7 +27,7 @@ export const services = [
             "Excavación masiva y selectiva",
             "Cortes y Compactación y perfilado de plataformas",
         ],
-        image: "transport.jpg",
+        image: "/services/transport.png",
     },
     {
         title: "Servicios para construcción",
@@ -37,6 +37,6 @@ export const services = [
             "Demolición controlada y limpieza de terreno",
             "Cimentación y obras preliminares",
         ],
-        image: "building.jpg",
+        image: "/services/building.png",
     },
 ];

@@ -7,11 +7,10 @@ import {
 } from "@/components/ui/sheet";
 
 const links = [
-    { href: "#nosotros", label: "Nosotros" },
-    { href: "#servicios", label: "Servicios" },
-    { href: "#proceso", label: "Proceso" },
-    { href: "#flota", label: "Flota" },
-    { href: "#proyectos", label: "Proyectos" },
+    { href: "/venta-transporte-agregados", label: "Venta y Transporte de Agregados" },
+    { href: "/alquiler-maquinaria-pesada", label: "Alquiler de Maquinaria Pesada" },
+    { href: "/movimiento-tierras", label: "Movimiento de Tierras" },
+    { href: "/servicios-construccion", label: "Servicios de Construcción" },
 ];
 
 export function MobileNav() {
@@ -35,13 +34,13 @@ export function MobileNav() {
                     ))}
                     <div className="flex flex-col gap-4 pt-6 border-t border-slate-200">
                         <a
-                            href=""
+                            href="https://wa.me/51979626232"
                             className="text-slate-900 transition-colors hover:text-primary"
                         >
                             +51 979 626 232
                         </a>
                         <a
-                            href=""
+                            href="#contacto"
                             className="bg-primary py-3 px-4 text-center text-white rounded-lg hover:bg-primary/90 transition-colors"
                         >
                             COTIZA

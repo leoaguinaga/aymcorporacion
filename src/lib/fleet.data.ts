@@ -1,37 +1,46 @@
 export const fleets = [
     {
-        image: "rent.jpg",
-        title: "Excavadoras Hidráulicas",
+        image: "cargador.png",
+        title: "Cargador Frontal 950H CAT",
         items: [
             "20 – 35 toneladas",
-            "Brazo largo y estándar",
+            "Flota de 1 unidad",
             "GPS integrado"
         ],
     },
     {
-        image: "chargers.jpg",
-        title: "Cargadores Frontales",
+        image: "volquete.png",
+        title: "Volquete Volvo",
         items: [
             "3 – 5 m³ de capacidad",
-            "Motor turbo diésel",
+            "Flota de 2 unidades",
             "Neumáticos HD"
         ],
     },
     {
-        image: "rent.jpg",
-        title: "Volquetes",
+        image: "cisterna.png",
+        title: "Cisterna Mercedes",
         items: [
             "15 m³ de tolva",
-            "Flota de 6 unidades",
+            "Flota de 3 unidades",
             "Rastreo satelital"
         ],
     },
     {
-        image: "chargers.jpg",
-        title: "Retroexcavadoras",
+        image: "rodillo.png",
+        title: "Rodllo CAT",
         items: [
             "Doble función carga/excav.",
-            "Ideal para obras urbanas",
+            "Flota de 1 unidad",
+            "Compactas y versátiles"
+        ],
+    },
+    {
+        image: "motoniveladora.png",
+        title: "Motoniveladora 140M",
+        items: [
+            "Doble función carga/excav.",
+            "Flota de 1 unidad",
             "Compactas y versátiles"
         ],
     },

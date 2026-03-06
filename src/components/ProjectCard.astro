@@ -5,6 +5,15 @@ import Carretera2 from "@/assets/carretera2.jpeg";
 import MapPin from "@/assets/icons/map-pin.svg";
 import Briefcase from "@/assets/icons/briefcase.svg";
 import CircleCheck from "@/assets/icons/circle-check.svg";
+
+interface Props {
+    title: string;
+    location: string;
+    service: string;
+    result: string;
+}
+
+const { title, location, service, result } = Astro.props;
 ---
 
 <article
@@ -20,13 +29,13 @@ import CircleCheck from "@/assets/icons/circle-check.svg";
     >
         <div class="flex flex-col gap-4 text-sm md:text-base">
             <h2 class="font-black text-xl md:text-2xl">
-                Habitación Urbana - Vía principal
+                {title}
             </h2>
             <div class="flex flex-row items-start gap-3">
                 <MapPin class="size-5 md:size-6 text-accent shrink-0 mt-0.5" />
                 <div>
                     <p class="text-gray-700">Ubicación</p>
-                    <strong>Lima, Perú</strong>
+                    <strong>{location}</strong>
                 </div>
             </div>
             <div class="flex flex-row items-start gap-3">
@@ -35,9 +44,7 @@ import CircleCheck from "@/assets/icons/circle-check.svg";
                 />
                 <div>
                     <p class="text-gray-700">Servicio</p>
-                    <strong
-                        >Movimiento de tierras y transporte de agregados</strong
-                    >
+                    <strong>{service}</strong>
                 </div>
             </div>
             <div class="flex flex-row items-start gap-3">
@@ -46,10 +53,7 @@ import CircleCheck from "@/assets/icons/circle-check.svg";
                 />
                 <div>
                     <p class="text-gray-700">Resultado</p>
-                    <strong>
-                        12,000 m³ de material movido en 45 días. Entrega
-                        anticipada.
-                    </strong>
+                    <strong>{result}</strong>
                 </div>
             </div>
         </div>

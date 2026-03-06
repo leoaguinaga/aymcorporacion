@@ -5,17 +5,16 @@ import Header from "@/components/service/Header.astro";
 import Details from "@/components/service/Details.astro";
 
 const details = [
-    "Excavadoras sobre orugas (20-35 Tn)",
-    "Cargadores frontales",
-    "Retroexcavadoras",
-    "Rodillos compactadores",
-    "Volquetes de 15m³ y 20m³",
-    "Motoniveladora",
+    "02 Volquetes Volvo",
+    "03 Cisternas Mercedes",
+    "01 Motoniveladora 140M",
+    "01 Rodillo CAT",
+    "01 Cargador Frontal 950H CAT",
 ];
 ---
 
 <Layout>
-    <Header image="/services/rent.jpg">
+    <Header image="/services/rent.png">
         <Fragment slot="title">
             <span class="block text-white">Alquiler de</span>
             <span class="block text-accent">Maquinaria pesada</span>
@@ -30,7 +29,7 @@ const details = [
         title="Equipos disponibles"
         subtitle="Flota"
         items={details}
-        image="/services/rent.jpg"
+        image="/services/rent.png"
     />
     <CTA />
 </Layout>
