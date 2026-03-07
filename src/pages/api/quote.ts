@@ -41,13 +41,14 @@ export const POST: APIRoute = async ({ request }) => {
         const EMAIL_PASSWORD = import.meta.env.EMAIL_PASSWORD;
         const EMAIL_FROM_ADDRESS = import.meta.env.EMAIL_FROM_ADDRESS;
         const EMAIL_FROM_NAME = import.meta.env.EMAIL_FROM_NAME;
+        const EMAIL_END_ADDRESS = import.meta.env.EMAIL_END_ADDRESS;
 
-        if (!EMAIL_SERVICE || !EMAIL_USER || !EMAIL_PASSWORD || !EMAIL_FROM_ADDRESS || !EMAIL_FROM_NAME) {
+        if (!EMAIL_SERVICE || !EMAIL_USER || !EMAIL_PASSWORD || !EMAIL_FROM_ADDRESS || !EMAIL_FROM_NAME || !EMAIL_END_ADDRESS) {
             return new Response(
                 JSON.stringify({
                     ok: false,
                     error:
-                        "Email env vars missing. Required: EMAIL_SERVICE, EMAIL_USER, EMAIL_PASSWORD, EMAIL_FROM_ADDRESS, EMAIL_FROM_NAME",
+                        "Email env vars missing. Required: EMAIL_SERVICE, EMAIL_USER, EMAIL_PASSWORD, EMAIL_FROM_ADDRESS, EMAIL_FROM_NAME, EMAIL_END_ADDRESS",
                 }),
                 { status: 500, headers: { "Content-Type": "application/json" } }
             );
@@ -65,7 +66,7 @@ export const POST: APIRoute = async ({ request }) => {
 
         await transporter.sendMail({
             from,
-            to: EMAIL_USER,
+            to: EMAIL_END_ADDRESS,
             subject: "Nueva solicitud de cotización - AYM",
             text: `
             Nueva solicitud de cotización: \n\n
