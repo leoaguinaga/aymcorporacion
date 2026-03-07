@@ -1,6 +1,6 @@
 export const fleets = [
     {
-        image: "cargador.png",
+        image: "cargador.webp",
         title: "Cargador Frontal 950H CAT",
         items: [
             "20 – 35 toneladas",
@@ -9,7 +9,7 @@ export const fleets = [
         ],
     },
     {
-        image: "volquete.png",
+        image: "volquete.webp",
         title: "Volquete Volvo",
         items: [
             "3 – 5 m³ de capacidad",
@@ -18,7 +18,7 @@ export const fleets = [
         ],
     },
     {
-        image: "cisterna.png",
+        image: "cisterna.webp",
         title: "Cisterna Mercedes",
         items: [
             "15 m³ de tolva",
@@ -27,7 +27,7 @@ export const fleets = [
         ],
     },
     {
-        image: "rodillo.png",
+        image: "rodillo.webp",
         title: "Rodllo CAT",
         items: [
             "Doble función carga/excav.",
@@ -36,7 +36,7 @@ export const fleets = [
         ],
     },
     {
-        image: "motoniveladora.png",
+        image: "motoniveladora.webp",
         title: "Motoniveladora 140M",
         items: [
             "Doble función carga/excav.",

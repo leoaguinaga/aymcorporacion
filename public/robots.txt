@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Palabras clave objetivo SEO local:
+# transporte de agregados en Chiclayo
+# servicios de construccion en Chiclayo
+# alquiler de maquinaria pesada en Chiclayo
+# movimiento de tierras en Lambayeque
+
+Sitemap: https://aymcorporacion.com/sitemap.xml

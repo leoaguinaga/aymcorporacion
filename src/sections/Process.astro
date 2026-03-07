@@ -6,22 +6,27 @@ import ShieldCheck from "../assets/icons/shield-check.svg";
 import ArrowTrendingUp from "../assets/icons/arrow-trending-up.svg";
 ---
 
-<section class="bg-gray-950 py-16 md:py-20 scroll-mt-10" id="proceso">
+<section
+    class="bg-gray-950 py-16 md:py-20 scroll-mt-10"
+    id="proceso"
+    aria-labelledby="process-title"
+>
     <div class="max-w-8xl flex flex-col gap-8 w-full mx-auto px-6 xl:px-0">
         <div class="flex flex-col items-center gap-2 text-center">
-            <h2 class="text-2xl md:text-3xl font-extrabold text-accent">
+            <p class="text-2xl md:text-3xl font-extrabold text-accent">
                 Proceso de trabajo
-            </h2>
-            <h1
+            </p>
+            <h2
+                id="process-title"
                 class="uppercase font-black text-3xl md:text-4xl tracking-wide text-white"
             >
                 Metodología clara y probada
-            </h1>
+            </h2>
         </div>
-        <div
+        <ol
             class="w-full gap-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5"
         >
-            <div
+            <li
                 class="flex flex-col gap-1 p-6 relative text-center border border-accent bg-accent/10 rounded-lg"
             >
                 <ClipboardCheck class="size-9 text-accent place-self-center" />
@@ -36,8 +41,8 @@ import ArrowTrendingUp from "../assets/icons/arrow-trending-up.svg";
                 <p class="text-white/80 text-sm">
                     Análisis técnico del proyecto y requerimientos del cliente.
                 </p>
-            </div>
-            <div
+            </li>
+            <li
                 class="flex flex-col gap-1 p-6 relative text-center border border-accent bg-accent/10 rounded-lg"
             >
                 <LightBulb class="size-9 text-accent place-self-center" />
@@ -52,8 +57,8 @@ import ArrowTrendingUp from "../assets/icons/arrow-trending-up.svg";
                 <p class="text-white/80 text-sm">
                     Cotización detallada con equipos, plazos y condiciones.
                 </p>
-            </div>
-            <div
+            </li>
+            <li
                 class="flex flex-col gap-1 p-6 relative text-center border border-accent bg-accent/10 rounded-lg"
             >
                 <Calendar class="size-9 text-accent place-self-center" />
@@ -68,8 +73,8 @@ import ArrowTrendingUp from "../assets/icons/arrow-trending-up.svg";
                 <p class="text-white/80 text-sm">
                     Planificación de cronograma y asignación de recursos.
                 </p>
-            </div>
-            <div
+            </li>
+            <li
                 class="flex flex-col gap-1 p-6 relative text-center border border-accent bg-accent/10 rounded-lg"
             >
                 <ArrowTrendingUp class="size-9 text-accent place-self-center" />
@@ -82,8 +87,8 @@ import ArrowTrendingUp from "../assets/icons/arrow-trending-up.svg";
                 <p class="text-white/80 text-sm">
                     Operación con maquinaria propia y operadores certificados.
                 </p>
-            </div>
-            <div
+            </li>
+            <li
                 class="flex flex-col gap-1 p-6 relative text-center border border-accent bg-accent/10 rounded-lg"
             >
                 <ShieldCheck class="size-9 text-accent place-self-center" />
@@ -98,7 +103,7 @@ import ArrowTrendingUp from "../assets/icons/arrow-trending-up.svg";
                 <p class="text-white/80 text-sm">
                     Control de calidad y entrega conforme al proyecto.
                 </p>
-            </div>
-        </div>
+            </li>
+        </ol>
     </div>
 </section>

@@ -6,10 +6,13 @@ import { ServicesHover } from "@/components/ServicesHover";
 
 <header class="fixed top-0 bg-background backdrop-blur-xl z-999 w-full">
     <nav
+        aria-label="Navegación principal"
         class="max-w-8xl mx-auto py-2 md:py-0.75 flex justify-between items-center font-medium"
     >
         <div class="flex items-center gap-4">
-            <LogoSvg class="h-10 md:h-12" />
+            <a href="/" aria-label="Ir al inicio de AyM Corporación de Negocios">
+                <LogoSvg class="h-10 md:h-12" />
+            </a>
             <div class="hidden lg:flex items-center gap-4 ml-4">
                 <a
                     href="/"
@@ -29,11 +32,14 @@ import { ServicesHover } from "@/components/ServicesHover";
             <a
                 href="https://wa.me/51979626232"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contactar por WhatsApp al +51 979 626 232"
                 class="hover:text-primary transition-colors duration-300"
                 >+51 979 626 232</a
             >
             <a
                 href="#contacto"
+                aria-label="Ir al formulario de cotización"
                 class="bg-primary px-4 py-1.75 text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors duration-300 cursor-pointer"
             >
                 Cotiza

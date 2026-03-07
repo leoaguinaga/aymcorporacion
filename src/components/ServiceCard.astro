@@ -6,8 +6,10 @@ import ArrowRight from "@/assets/icons/arrow-right.svg";
 <article class="w-full flex flex-col rounded-xl overflow-hidden shadow-lg">
     <img
         src={`${image}`}
-        alt=""
+        alt={`Servicio de ${title} en Chiclayo`}
         class="max-h-60 w-full object-cover hover:scale-105 transition-transform duration-300 over"
+        loading="lazy"
+        decoding="async"
     />
     <div class="p-6 bg-white z-1 flex flex-col gap-4 text-left">
         <h3 class="text-xl uppercase font-extrabold">
@@ -25,6 +27,7 @@ import ArrowRight from "@/assets/icons/arrow-right.svg";
         </ul>
         <a
             href={href}
+            aria-label={`Ver más sobre ${title}`}
             class="font-bold text-amber-500 flex items-center text-sm gap-1"
             >Ver más
             <ArrowRight class="size-3.5" />

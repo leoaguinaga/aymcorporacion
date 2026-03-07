@@ -2,7 +2,11 @@
 import { PortfolioCarousel } from "@/components/PortfolioCarousel";
 ---
 
-<section class="bg-gray-100 py-16 md:py-20" id="proyectos">
+<section
+    class="bg-gray-100 py-16 md:py-20"
+    id="proyectos"
+    aria-labelledby="portfolio-title"
+>
     <div class="max-w-8xl mx-auto px-6 xl:px-0">
         <PortfolioCarousel client:only="react" />
     </div>

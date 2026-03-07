@@ -1,35 +1,39 @@
 ---
-import LosPortales from "@/../public/hero/losportales.png";
+import LosPortales from "@/../public/hero/losportales.webp";
 import Galilea from "@/../public/hero/logo-galilea.svg";
 ---
 
 <section
+    id="inicio"
+    aria-labelledby="hero-title"
     class="flex flex-col lg:flex-row max-w-8xl mx-auto justify-between pt-24 lg:pt-15 pb-10 px-6 xl:px-0 gap-10 lg:gap-8"
 >
     <div class="w-full flex flex-col gap-6 lg:gap-4 justify-center lg:py-25">
         <h1
+            id="hero-title"
             class="text-4xl lg:text-5xl font-extrabold max-w-2xl leading-tight lg:leading-normal"
         >
-            Construcción y Venta de Agregados con <span class="text-primary"
-                >Maquinaria Propia</span
-            > en Chiclayo
+            Empresa líder en <span class="text-primary">transporte de agregados</span>, construcción y alquiler de maquinaria pesada en Chiclayo
         </h1>
-        <h2 class="text-base lg:text-lg text-gray-600 lg:max-w-164 font-medium">
-            Ejecutamos proyectos de construcción, movimiento de tierras y
-            suministro de agregados con maquinaria propia, garantizando
-            eficiencia, control y entrega directa en obra.
-        </h2>
+        <p
+            id="hero-description"
+            class="text-base lg:text-lg text-gray-600 lg:max-w-164 font-medium"
+        >
+            Ejecutamos proyectos de infraestructura con maquinaria propia para brindar servicios de construcción, movimiento de tierras y suministro de agregados con entrega directa en obra.
+        </p>
         <div
             class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center"
         >
             <a
                 href="#contacto"
+                aria-label="Solicitar cotización de transporte de agregados, construcción o alquiler de maquinaria pesada"
                 class="bg-primary px-5 py-3 lg:py-2 text-white font-semibold rounded-lg hover:bg-primary/90 text-center text-base lg:text-lg transition-colors duration-300 cursor-pointer"
             >
                 Solicitar cotización
             </a>
             <a
-                href="#contacto"
+                href="#proyectos"
+                aria-label="Ver proyectos ejecutados en Chiclayo y Lambayeque"
                 class="bg-secondary px-5 py-3 lg:py-2 text-white font-semibold rounded-lg hover:bg-secondary/90 text-center text-base lg:text-lg transition-colors duration-300 cursor-pointer"
             >
                 Ver proyectos
@@ -62,25 +66,33 @@ import Galilea from "@/../public/hero/logo-galilea.svg";
     >
         <div
             class="relative w-full overflow-hidden rounded-2xl aspect-9/10 max-h-150"
+            role="region"
+            aria-label="Galería de maquinaria y proyectos"
         >
             <div
                 id="hero-track"
                 class="flex flex-row h-full transition-transform duration-500 ease-out w-full"
             >
                 <img
-                    src="/hero/main.png"
-                    alt=""
+                    src="/hero/main.webp"
+                    alt="Maquinaria pesada de AyM operando en obra de construcción en Chiclayo"
                     class="w-full h-full object-cover shrink-0"
+                    loading="eager"
+                    decoding="async"
                 />
                 <img
-                    src="/hero/apisonadora.png"
-                    alt=""
+                    src="/hero/apisonadora.webp"
+                    alt="Compactación de terreno con maquinaria propia de AyM"
                     class="w-full h-full object-cover shrink-0"
+                    loading="lazy"
+                    decoding="async"
                 />
                 <img
-                    src="/hero/rodillo.png"
-                    alt=""
+                    src="/hero/rodillo.webp"
+                    alt="Rodillo de AyM en proyecto de infraestructura vial"
                     class="w-full h-full object-cover shrink-0"
+                    loading="lazy"
+                    decoding="async"
                 />
             </div>
         </div>
@@ -88,15 +100,18 @@ import Galilea from "@/../public/hero/logo-galilea.svg";
             <button
                 data-index="0"
                 class="hero-dot w-8 h-2 rounded-full bg-primary transition-all duration-300 cursor-pointer"
-                aria-label="Slide 1"></button>
+                aria-label="Ir a la imagen 1"
+                aria-current="true"></button>
             <button
                 data-index="1"
                 class="hero-dot w-4 h-2 rounded-full bg-secondary transition-all duration-300 cursor-pointer"
-                aria-label="Slide 2"></button>
+                aria-label="Ir a la imagen 2"
+                aria-current="false"></button>
             <button
                 data-index="2"
                 class="hero-dot w-4 h-2 rounded-full bg-secondary transition-all duration-300 cursor-pointer"
-                aria-label="Slide 3"></button>
+                aria-label="Ir a la imagen 3"
+                aria-current="false"></button>
         </div>
     </div>
 </section>
@@ -119,9 +134,11 @@ import Galilea from "@/../public/hero/logo-galilea.svg";
                 if (i === index) {
                     dot.classList.remove("w-4", "bg-secondary");
                     dot.classList.add("w-8", "bg-primary");
+                    dot.setAttribute("aria-current", "true");
                 } else {
                     dot.classList.remove("w-8", "bg-primary");
                     dot.classList.add("w-4", "bg-secondary");
+                    dot.setAttribute("aria-current", "false");
                 }
             });
         };

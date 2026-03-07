@@ -15,14 +15,16 @@ export function ProjectCard({ title, location, service, result }: Props) {
         <article className="flex flex-col lg:flex-row rounded-xl overflow-hidden shadow-xl w-full">
             <img
                 src={Project.src}
-                alt=""
+                alt={`Proyecto ${title} ejecutado por AyM`}
                 className="w-full lg:w-1/2 h-[300px] lg:h-auto object-cover"
+                loading="lazy"
+                decoding="async"
             />
             <div className="flex flex-col gap-6 md:gap-8 p-6 md:p-8 w-full lg:w-1/2 bg-white justify-center">
                 <div className="flex flex-col gap-4 text-sm md:text-base">
-                    <h2 className="font-black text-xl md:text-2xl">
+                    <h3 className="font-black text-xl md:text-2xl">
                         {title}
-                    </h2>
+                    </h3>
                     <div className="flex flex-row items-start gap-3">
                         <MapPin className="size-5 md:size-6 text-accent shrink-0 mt-0.5" />
                         <div>
@@ -48,18 +50,24 @@ export function ProjectCard({ title, location, service, result }: Props) {
                 <div className="flex items-center justify-between gap-3 md:gap-4 mt-2 lg:mt-0">
                     <img
                         src={Project.src}
-                        alt=""
+                        alt={`Vista del proyecto en ${location}`}
                         className="w-[calc(100%/3-8px)] md:w-[calc(100%/3-11px)] h-20 sm:h-28 lg:h-full object-cover rounded-lg"
+                        loading="lazy"
+                        decoding="async"
                     />
                     <img
                         src={Carretera1.src}
-                        alt=""
+                        alt={`Evidencia de avance de ${service}`}
                         className="w-[calc(100%/3-8px)] md:w-[calc(100%/3-11px)] h-20 sm:h-28 lg:h-full object-cover rounded-lg"
+                        loading="lazy"
+                        decoding="async"
                     />
                     <img
                         src={Carretera2.src}
-                        alt=""
+                        alt={`Resultado final: ${result}`}
                         className="w-[calc(100%/3-8px)] md:w-[calc(100%/3-11px)] h-20 sm:h-28 lg:h-full object-cover rounded-lg"
+                        loading="lazy"
+                        decoding="async"
                     />
                 </div>
             </div>

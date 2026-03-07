@@ -1,5 +1,5 @@
 ---
-import Logo from "@/../public/logos/AYM LOGOS FINALES-02.png";
+import Logo from "@/../public/logos/AYM LOGOS FINALES-02.webp";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 ---
 
@@ -10,11 +10,11 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
         >
             {/* Opciones Generales */}
             <div class="space-y-4">
-                <img src={Logo.src} alt="AYM Logo" class="h-20 md:h-25" />
+                <img src={Logo.src} alt="Logo de AyM Corporación de Negocios" class="h-20 md:h-25" />
                 <p class="text-sm leading-relaxed">
                     Especialistas en alquiler de maquinaria pesada, venta de
-                    agregados y ejecución de proyectos de infraestructura en
-                    Chiclayo, Lambayeque.
+                    agregados, transporte y ejecución de proyectos de
+                    infraestructura en Chiclayo, Lambayeque.
                 </p>
             </div>
 
@@ -96,30 +96,33 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
             <div class="space-y-4">
                 <h4 class="text-black text-lg font-bold">Contacto</h4>
+                <address class="not-italic">
                 <ul class="space-y-2">
                     <li class="flex items-start gap-3">
                         <MapPin
                             className="w-5 h-5 text-accent shrink-0 mt-0.5"
+                            aria-hidden="true"
                         />
                         <span class="text-sm"
                             >Carretera Chiclayo, Lambayeque</span
                         >
                     </li>
                     <li class="flex items-center gap-3">
-                        <Phone className="w-5 h-5 text-accent shrink-0" />
-                        <span class="text-sm">+51 979 626 232</span>
+                        <Phone className="w-5 h-5 text-accent shrink-0" aria-hidden="true" />
+                        <a class="text-sm hover:text-accent transition-colors" href="tel:+51979626232">+51 979 626 232</a>
                     </li>
                     <li class="flex items-center gap-3">
-                        <Phone className="w-5 h-5 text-accent shrink-0" />
-                        <span class="text-sm">+51 945 227 841</span>
+                        <Phone className="w-5 h-5 text-accent shrink-0" aria-hidden="true" />
+                        <a class="text-sm hover:text-accent transition-colors" href="tel:+51945227841">+51 945 227 841</a>
                     </li>
                     <li class="flex items-center gap-3">
-                        <Mail className="w-5 h-5 text-accent shrink-0" />
-                        <span class="text-sm">contacto@aymcorporacion.com</span>
+                        <Mail className="w-5 h-5 text-accent shrink-0" aria-hidden="true" />
+                        <a class="text-sm hover:text-accent transition-colors" href="mailto:contacto@aymcorporacion.com">contacto@aymcorporacion.com</a>
                     </li>
                     <li class="flex items-start gap-3">
                         <Clock
                             className="w-5 h-5 text-accent shrink-0 mt-0.5"
+                            aria-hidden="true"
                         />
                         <span class="text-sm"
                             >Lunes - Viernes: 8:00 AM - 6:00 PM<br />Sábados:
@@ -127,6 +130,7 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
                         >
                     </li>
                 </ul>
+                </address>
             </div>
         </div>
     </div>

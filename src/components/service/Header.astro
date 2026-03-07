@@ -3,10 +3,14 @@ const { image, title, subtitle } = Astro.props;
 import { ArrowLeft } from "lucide-react";
 ---
 
-<div class="relative flex flex-col justify-end pb-20 pt-30 overflow-hidden">
+<section
+    class="relative flex flex-col justify-end pb-20 pt-30 overflow-hidden"
+    aria-labelledby="service-page-title"
+>
     <img
         src={image}
-        alt={title}
+        alt=""
+        aria-hidden="true"
         class="absolute inset-0 w-full h-full object-cover z-0"
     />
     <div
@@ -18,19 +22,21 @@ import { ArrowLeft } from "lucide-react";
     >
         <a
             href="/"
+            aria-label="Volver al inicio"
             class="flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-wider mb-8 hover:text-white transition-colors"
         >
             <ArrowLeft className="w-4 h-4" /> VOLVER AL INICIO
         </a>
-        <div
+        <h1
+            id="service-page-title"
             class="text-white text-4xl md:text-5xl font-black uppercase leading-[0.9] tracking-tight mb-4 drop-shadow-lg"
         >
             <slot name="title">
                 {title}
             </slot>
-        </div>
+        </h1>
         <div class="text-slate-200 max-w-2xl text-lg leading-relaxed mt-2">
             <slot name="subtitle" />
         </div>
     </div>
-</div>
+</section>
