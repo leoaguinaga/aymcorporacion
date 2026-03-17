@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/carousel"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { ProjectCard } from "@/components/ProjectCard"
-import { portfolio } from "@/lib/portfolio.data"
+import { projects } from "@/lib/projects.data"
 
 export function PortfolioCarousel() {
     return (
@@ -52,13 +52,14 @@ export function PortfolioCarousel() {
 
             <div className="w-full mt-4 md:mt-4 cursor-grab active:cursor-grabbing">
                 <CarouselContent>
-                    {portfolio.map((item, index) => (
+                    {projects.map((item, index) => (
                         <CarouselItem key={index}>
                             <ProjectCard
                                 title={item.title}
                                 location={item.location}
                                 service={item.service}
                                 result={item.result}
+                                images={item.images}
                             />
                         </CarouselItem>
                     ))}

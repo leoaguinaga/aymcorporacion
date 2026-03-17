@@ -1,21 +1,25 @@
+import { useState } from "react";
 import { MapPin, Briefcase, CircleCheck } from "lucide-react";
-import Project from "@/assets/project.jpg";
-import Carretera1 from "@/assets/carretera1.jpg";
-import Carretera2 from "@/assets/carretera2.jpeg";
+import type { ProjectImages } from "@/lib/projects.data";
 
 interface Props {
     title: string;
     location: string;
     service: string;
     result: string;
+    images: ProjectImages;
 }
 
-export function ProjectCard({ title, location, service, result }: Props) {
+export function ProjectCard({ title, location, service, result, images }: Props) {
+    const gallery = [images.main, ...images.secondary];
+    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+    const selectedImage = gallery[selectedImageIndex];
+
     return (
         <article className="flex flex-col lg:flex-row rounded-xl overflow-hidden shadow-xl w-full">
             <img
-                src={Project.src}
-                alt={`Proyecto ${title} ejecutado por AyM`}
+                src={selectedImage.src}
+                alt={selectedImage.alt}
                 className="w-full lg:w-1/2 h-[300px] lg:h-auto object-cover"
                 loading="lazy"
                 decoding="async"
@@ -48,27 +52,28 @@ export function ProjectCard({ title, location, service, result }: Props) {
                     </div>
                 </div>
                 <div className="flex items-center justify-between gap-3 md:gap-4 mt-2 lg:mt-0">
-                    <img
-                        src={Project.src}
-                        alt={`Vista del proyecto en ${location}`}
-                        className="w-[calc(100%/3-8px)] md:w-[calc(100%/3-11px)] h-20 sm:h-28 lg:h-full object-cover rounded-lg"
-                        loading="lazy"
-                        decoding="async"
-                    />
-                    <img
-                        src={Carretera1.src}
-                        alt={`Evidencia de avance de ${service}`}
-                        className="w-[calc(100%/3-8px)] md:w-[calc(100%/3-11px)] h-20 sm:h-28 lg:h-full object-cover rounded-lg"
-                        loading="lazy"
-                        decoding="async"
-                    />
-                    <img
-                        src={Carretera2.src}
-                        alt={`Resultado final: ${result}`}
-                        className="w-[calc(100%/3-8px)] md:w-[calc(100%/3-11px)] h-20 sm:h-28 lg:h-full object-cover rounded-lg"
-                        loading="lazy"
-                        decoding="async"
-                    />
+                    {gallery.map((image, index) => (
+                        <button
+                            key={image.src}
+                            type="button"
+                            onClick={() => setSelectedImageIndex(index)}
+                            className={`w-[calc(100%/3-8px)] md:w-[calc(100%/3-11px)] overflow-hidden rounded-lg border-2 focus:outline-none focus:ring-2 focus:ring-primary/40 cursor-pointer transition-colors ${
+                                selectedImageIndex === index
+                                    ? "border-primary"
+                                    : "border-transparent"
+                            }`}
+                            aria-label={`Ver imagen del proyecto ${title}`}
+                            aria-pressed={selectedImageIndex === index}
+                        >
+                            <img
+                                src={image.src}
+                                alt={image.alt}
+                                className="w-full h-20 sm:h-28 lg:h-full object-cover rounded-lg transition-transform duration-300 hover:scale-105"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </button>
+                    ))}
                 </div>
             </div>
         </article>
